@@ -24,6 +24,7 @@ public class Dosen {
     private String id;
     private String nama;
     private String prodi;
+    private String nip_nrp;
     @CreationTimestamp
     private LocalDateTime createdOn;
     @UpdateTimestamp
