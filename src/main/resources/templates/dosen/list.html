@@ -6,6 +6,27 @@
         <div class="container" layout:fragment="body">
             <h1>List Dosen</h1>
             <a class="btn btn-success" href="/dosen/baru"><i class="bi bi-plus"></i>Tambah Dosen</a>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>NIP/NRP</th>
+                        <th>Prodi</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="dosen, iter : ${list_dosen}">
+                            <td th:text="${iter.index+1}"></td>
+                            <td th:text="${dosen.nama}"></td>
+                            <td th:text="${dosen.nip_nrp}"></td>
+                            <td th:text="${dosen.prodi}"></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </body>
 </html>
