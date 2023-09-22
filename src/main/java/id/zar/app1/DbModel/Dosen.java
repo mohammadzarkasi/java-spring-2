@@ -29,4 +29,8 @@ public class Dosen {
     private LocalDateTime createdOn;
     @UpdateTimestamp
     private LocalDateTime updatedOn;
+
+    public void setId(String id){
+        this.id=id;
+    }
 }

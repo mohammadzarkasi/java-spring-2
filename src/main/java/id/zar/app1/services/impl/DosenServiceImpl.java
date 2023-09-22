@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class DosenServiceImpl implements DosenService {
@@ -22,5 +23,13 @@ public class DosenServiceImpl implements DosenService {
         List<Dosen> listDosen = repo.findAll();
 
         return listDosen;
+    }
+
+    @Override
+    public Dosen addDosen(Dosen dosenBaru)
+    {
+        dosenBaru.setId( UUID.randomUUID().toString());
+        var result = repo.save(dosenBaru);
+        return result;
     }
 }

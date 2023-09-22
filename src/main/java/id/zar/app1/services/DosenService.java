@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface DosenService {
     List<Dosen> findAllDosen();
+
+    Dosen addDosen(Dosen dosenBaru);
 }
