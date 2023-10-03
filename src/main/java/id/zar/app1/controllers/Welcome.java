@@ -8,6 +8,7 @@ public class Welcome
 {
     @GetMapping("/")
     public String index(){
+        System.out.println("index welcome");
         return "welcome1";
     }
 }
